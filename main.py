@@ -56,15 +56,17 @@ if __name__ == '__main__':
         exit()
 
     if action == 'get_source':
-        source_list = []
         if file_name:
             search_list = get_file_info(file_name)
             for search_name in search_list:
-                source_name, dsc_link = get_source_name(search_name, code_name)
-                print(search_name, source_name, '||', dsc_link)
+                get_source_name(search_name, code_name)
         else:
-            source_name, dsc_link = get_source_name(search_name, code_name)
-            print(source_name, '||', dsc_link)
+            get_source_name(search_name, code_name)
 
-    if action == 'list_binary':
-        get_list_binary(search_name, code_name)
+    elif action == 'list_binary':
+        if file_name:
+            search_list = get_file_info(file_name)
+            for search_name in search_list:
+                get_list_binary(search_name,code_name)
+        else:
+            get_list_binary(search_name, code_name)

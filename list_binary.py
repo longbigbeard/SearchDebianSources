@@ -15,5 +15,7 @@ def get_list_binary(search_name, code_name):
         print(b.get_text(), end=' ')
 
     dsc_link = soup.select_one('#pdownload > table > tr:nth-child(2) > td:nth-child(1) > a')
-    print('|', dsc_link.get_attribute_list('href')[0]) if len(dsc_link.get_attribute_list('href')) > 0 else print('|')
-
+    if dsc_link:
+        print('|', dsc_link.get_attribute_list('href')[0]) if len(dsc_link.get_attribute_list('href')) > 0 else print('|')
+    else:
+        print("查无")

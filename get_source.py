@@ -19,9 +19,9 @@ def get_source_name(search_name, code_name):
             dsc_link = dsc_link.get_attribute_list('href')[0]
         else:
             dsc_link = ''
-        return source_name[0].get_text(), dsc_link
+        print(source_name[0].get_text(), '||', dsc_link)
     else:
-        return '查无'
+        print('查无')
 
 
 
