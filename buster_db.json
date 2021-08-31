@@ -1,0 +1,6 @@
+{
+    "xfonts-base": "xfonts-base  ||  http://deb.debian.org/debian/pool/main/x/xfonts-base/xfonts-base_1.0.5.dsc",
+    "tree": "tree  ||  http://deb.debian.org/debian/pool/main/t/tree/tree_1.8.0-1.dsc",
+    "x11-common": "xorg  ||  http://deb.debian.org/debian/pool/main/x/xorg/xorg_7.7+19.dsc",
+    "cups": "cups  ||  http://deb.debian.org/debian/pool/main/c/cups/cups_2.2.10-6+deb10u4.dsc"
+}

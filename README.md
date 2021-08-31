@@ -11,3 +11,7 @@ main -a <action> -n <search_name> [ -c <code_name> -f <file> ]
     -f <file>
         file contain package or source name
 ```
+
+- 单独搜索： main.py -n tree
+- 文件搜索： main.py -f list 
+

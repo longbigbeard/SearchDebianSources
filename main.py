@@ -5,6 +5,7 @@ from getopt import gnu_getopt
 from get_source import get_source_name
 from list_binary import get_list_binary
 from utils import get_file_info
+from settings import codename_list
 
 
 def usage():
@@ -51,6 +52,9 @@ if __name__ == '__main__':
             code_name = v
         elif o == '-f' and v:
             file_name = v
+    if not code_name or code_name not in codename_list:
+        print("codename错误，请使用下列codename：", codename_list)
+        exit(0)
     if not search_name and not file_name:
         print("单个搜索名称为必须")
         exit()
@@ -67,6 +71,6 @@ if __name__ == '__main__':
         if file_name:
             search_list = get_file_info(file_name)
             for search_name in search_list:
-                get_list_binary(search_name,code_name)
+                get_list_binary(search_name, code_name)
         else:
             get_list_binary(search_name, code_name)
